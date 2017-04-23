@@ -69,7 +69,7 @@ module.exports = {
   // },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Boilerplate',
+      title: 'Albums Library App',
       // //remove whitespaces from generated html file
       // minify: {
       //   collapseWhitespace: true
