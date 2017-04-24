@@ -3,7 +3,7 @@ Single page application that allows to create new album with logo, title, author
 year fields, display, delete and update it. Website is friendly with different screen sizes.
 
 ### Demo
-<a target="_blank" href="https://glacial-beyond-17297.herokuapp.com/#/">Demo Link</a>
+<a target="_blank" href="https://damp-forest-97215.herokuapp.com/">Demo Link</a>
 
 
 ### Features
