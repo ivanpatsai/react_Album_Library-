@@ -7,24 +7,18 @@ import {startFetchAlbums} from './../actions/index';
 
 class AlbumList extends Component {
 
-
-  constructor(props) {
-    super(props);
-
-  }
-
   componentWillMount() {
     this.props.startFetchAlbums();
   }
 
   render() {
     const {albums} = this.props;
-    if (albums === null || albums.length === 0) {
+    if (!albums) {
       return <div className="loader"></div>;
     }
     const renderAlbums = () => {
       //last item of the array is the first item on the page
-      return albums.slice(0).reverse().map((album) => {
+      return albums.reverse().map((album) => {
         return (
         <div
           className="col-sm-4 col-xs-12 col-md-3"

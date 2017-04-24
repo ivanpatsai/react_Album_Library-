@@ -1,18 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {reduxForm, Field} from 'redux-form';
+import {reduxForm} from 'redux-form';
 
 import {startAddAlbum} from './../actions/index';
-
-const renderInput = field =>
-  <div>
-    <input {...field.input} className="form-control" type={field.type}/>
-    {field.meta.touched &&
-    field.meta.error &&
-    <div className="help-block error">
-      {field.meta.touched ? field.meta.error : ''}
-    </div>}
-  </div>;
+import {createInput} from './../api/createInput';
 
 class AddAlbum extends Component {
 
@@ -26,64 +17,14 @@ class AddAlbum extends Component {
       <div className="row">
         <div className="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
           <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-            <h3>Create A New Album</h3>
-            <div className="form-group">
-              <label>Logo URL</label>
-              <Field
-                name="logoUrl"
-                component={renderInput}
-                type="text"
-              />
-            </div>
-            <div className="form-group">
-              <label>Title</label>
-              <Field
-                name="title"
-                component={renderInput}
-                type="text"
-              />
-            </div>
-            <div className="form-group">
-              <label>Artist</label>
-              <Field
-                name="artist"
-                component={renderInput}
-                type="text"
-              />
-            </div>
-            <div className="form-group">
-              <label>Country</label>
-              <Field
-                name="country"
-                component={renderInput}
-                type="text"
-              />
-            </div>
-            <div className="form-group">
-              <label>Company</label>
-              <Field
-                name="company"
-                component={renderInput}
-                type="text"
-              />
-            </div>
-            <div className="form-group">
-              <label>Price</label>
-              <Field
-                name="price"
-                component={renderInput}
-                type="text"
-              />
-            </div>
-            <div className="form-group">
-              <label>Year</label>
-              <Field
-                name="year"
-                component={renderInput}
-                type="text"
-              />
-            </div>
-
+            <h3>Update Album</h3>
+            {createInput('Logo URL', 'logoUrl')}
+            {createInput('Title', 'title')}
+            {createInput('Artist', 'artist')}
+            {createInput('Country', 'country')}
+            {createInput('Company', 'company')}
+            {createInput('Price', 'price')}
+            {createInput('Year', 'year')}
             <button className="btn btn-primary" type="submit">Submit</button>
           </form>
         </div>

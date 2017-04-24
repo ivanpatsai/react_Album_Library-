@@ -30,7 +30,6 @@ App is deployed on [Heroku]
 - ES6
 
 ### Todo:
-- connect [Firebase][fb];
 - finish with tests;
 
 
@@ -45,7 +44,6 @@ App is deployed on [Heroku]
 [karma]: https://karma-runner.github.io/1.0/index.html
 [mocha]: https://mochajs.org/
 [expect.js]: https://github.com/mjackson/expect
-[fb]: https://firebase.google.com/
 
 
 
