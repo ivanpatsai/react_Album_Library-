@@ -26,7 +26,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: 'js/[name].bundle.js'
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -50,6 +50,10 @@ module.exports = {
       {
         test: /\.(ttf|eot)$/,
         use: 'file-loader?name=/fonts/[name].[ext]'
+      },
+      {
+        test: /\.(jpg)/,
+        use: 'file-loader?name=[name].[ext]&outputPath=images/'
       },
       //jquery for bootstrap
       {

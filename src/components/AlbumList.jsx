@@ -30,7 +30,7 @@ class AlbumList extends Component {
             <div className="thumbnail">
               <img
                 className="img-responsive hidden-xs"
-                src={album.logoUrl ? album.logoUrl : "http://medreiting.ge/images/default_post.jpg"}
+                src={album.logoUrl ? album.logoUrl : require("./../images/default_post.jpg")}
                 alt=""
               />
               <hr className="hidden-xs"/>

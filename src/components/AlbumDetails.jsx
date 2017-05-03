@@ -27,7 +27,7 @@ class AlbumDetails extends Component {
     }
     const {title, artist, country, company, price, year, id} = this.props.album;
     //use default image if logoUrl is empty
-    const logoUrl = this.props.album.logoUrl ? this.props.album.logoUrl : "http://medreiting.ge/images/default_post.jpg"
+    const logoUrl = this.props.album.logoUrl ? this.props.album.logoUrl : require("./../images/default_post.jpg");
     return (
       <div className="container">
         <div className="row">
